@@ -17,5 +17,4 @@ def filterDictionaryWords ( ):
 
     inputFile.close()       #closing the input file
     outputFile.close()      #closing the output file
-
-filterDictionaryWords()
+    os.remove(fileName)
