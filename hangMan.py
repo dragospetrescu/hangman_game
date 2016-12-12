@@ -1,14 +1,24 @@
+#!/usr/bin/env python
 # the main function of the program
 # import the functions form the other files
 from getRandomWord import getRandomWord
+from getDictionary import getDictionary
+from filterDictionaryWords import filterDictionaryWords
 import sys
 import os
+import os.path
+
+# create the dictionary file
+if not os.path.isfile("dictionary"):
+    getDictionary ()
+    filterDictionaryWords()
+
 
 # word recieves a random word from the computers dictionary
 # found is the file
 word = getRandomWord()
 found = list (list ('_')*len(word))
-print word
+os.system('clear')
 
 # make the first and last letter known and all their repetitions
 for i in range (0, len(word)):

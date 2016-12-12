@@ -6,7 +6,7 @@ def getDictionary( ):
 
     if (platform.system() == 'Linux'):
         copyfile(os.path.realpath
-        ('/usr/share/dict/words.pre-dictionaries-common'), './dictionary')
+        ('/usr/share/dict/words.pre-dictionaries-common'), './tempDictionary')
     else:
          if (platform.system() == 'Windows'):
              pass #TODO: get dictionary from windows

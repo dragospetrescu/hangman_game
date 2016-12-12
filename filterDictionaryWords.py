@@ -1,5 +1,6 @@
 # function that deletes non-corresponding words (such as names) from the
 # dictionary
+import os
 
 def filterDictionaryWords ( ):
     fileName = "tempDictionary"
