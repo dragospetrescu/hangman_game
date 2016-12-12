@@ -30,6 +30,7 @@ for i in range (0, len(word)):
 # read a letter and check if word contains that letter and makes is known
 print found
 error = 0
+wrong_letters =[]
 while found != word and error < 5:
     letter = (sys.stdin.read(2))[0]
     os.system('clear')
@@ -40,10 +41,16 @@ while found != word and error < 5:
             ok = 1
     if ok == 0:
         error += 1;
+        wrong_letters.append (letter)
+        print ("Wrong letters: ")
+        print wrong_letters
         print ("Letter was not good. Number of mistakes: "),
         print error
+
         print found
     else:
+        print ("Wrong letters: ")
+        print wrong_letters
         print ("Letter was good the new string is :")
         print found
 
