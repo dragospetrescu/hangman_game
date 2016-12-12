@@ -1,4 +1,4 @@
-The simple classic game of hangman implemented in python in any language
+The simple classic game of hangman for any language implemented in python 
 
 Implementation:
   In Linux we search in /usr/share/dict for the dictionary used by the computer. We copy it to the location of the game and       remove the words that start with capital letter and the ones that contain apostrophes.
