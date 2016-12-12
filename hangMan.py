@@ -47,11 +47,28 @@ while found != word and error < 5:
         print ("Letter was good the new string is :")
         print found
 
+#deleting temporary files when exiting program
+def delTempFiles():
+    files = [f for f in os.listdir(".") if os.path.isfile(f)]
+    for currentFile in files:
+        if currentFile.lower().endswith('pyc'):
+                os.remove(currentFile)
+
 
 # Check if win or lose
 if error == 5:
     print ("You failed! The word was "),
     print word
+    delTempFiles()
 else:
     print word
     print ("Congratulations! ")
+    delTempFiles()
+
+#exiting program
+def delTempFiles():
+    print "iesiiit"
+    files = [f for f in listdir(".") if isfile(join(".", f))]
+    for currentFile in files:
+        if any(currentFile.lower().endswith(pyc)):
+                os.remove(currentFile)
