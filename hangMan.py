@@ -2,6 +2,7 @@
 # import the functions form the other files
 from getRandomWord import getRandomWord
 import sys
+import os
 
 # word recieves a random word from the computers dictionary
 # found is the file
@@ -17,10 +18,11 @@ for i in range (0, len(word)):
         found [i] = word [-1]
 
 # read a letter and check if word contains that letter and makes is known
+print found
 error = 0
 while found != word and error < 5:
-    print found
     letter = (sys.stdin.read(2))[0]
+    os.system('clear')
     ok = 0
     for i in range (0, len(word)):
         if word [i] is letter:
@@ -28,6 +30,13 @@ while found != word and error < 5:
             ok = 1
     if ok == 0:
         error += 1;
+        print ("Letter was not good. Number of mistakes: "),
+        print error
+        print found
+    else:
+        print ("Letter was good the new string is :")
+        print found
+
 
 # Check if win or lose
 if error == 5:
