@@ -15,7 +15,8 @@ def onKeyPress(event):
             found [i] = letter
             ok = 1
     if ok == 0:
-        wrong_letters.append (letter)
+        if letter not in wrong_letters:
+            wrong_letters.append (letter)
 
 def newgame():
     global global_ok
@@ -49,7 +50,6 @@ while global_ok == 1:
 
     wrong_letters =[]
     error = 0
-
 
 
     label_err = Label (root, text ="Number of errors: "+ str(error))
